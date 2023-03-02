@@ -31,7 +31,6 @@ const LoginForm = () => {
   const handleSignUp = (email, password) => {
     try {
       signUp(email, password)
-
     } catch(error) {
       console.log(error)
     }

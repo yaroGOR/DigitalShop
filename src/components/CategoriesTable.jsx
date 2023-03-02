@@ -1,7 +1,6 @@
 import React from "react";
 import CategoryItem from "./CategoryItem";
 import styles from "../styles/CategoriesTable.module.scss";
-import { useLocation } from "react-router";
 
 const caegories = [
   { id: "1", title: "Rabbits",category:"rabbits", img: "", alt: "Rabbit", color: "red" },

@@ -118,7 +118,7 @@ const ItemsPage = () => {
             <option value="rabbits">Rabbits</option>
             <option value="comics">Comics</option>
             <option value="city">City</option>
-            <option value="children">Children</option>
+            <option value="child">Children</option>
           </select>
        
         <div className={styles.sort}>
