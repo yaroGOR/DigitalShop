@@ -15,15 +15,12 @@ const ItemCell = (props) => {
 
     let modalComponent = <p>To buy product, please, <Link to='/login' >Log In</Link> </p>
   const handleCart = () =>{
-    console.log('itemadded', item)
-    console.log('added to cart')
+   
     dispatch(addItem(item))
 
   }
   const handleBuy = () =>{
-    console.log('handle buy')
     if (user) {
-
          modalComponent = <p> Item is unaviable </p>
          setShowModal(true)
 
@@ -40,8 +37,10 @@ const ItemCell = (props) => {
     
 
 
-    <div className={styles.itemCell} onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)}>
-    {showModal ? <Modal show={show} setShow={setShow}>{modalComponent}</Modal>
+    <div className={styles.itemCell} onMouseEnter={()=>setShow(true)} onMouseLeave={()=>{
+        setShow(false) 
+        setShowModal(false)}}>
+    {showModal ? <Modal >{modalComponent}</Modal>
     
     :
     <>

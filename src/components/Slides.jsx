@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,8 +9,7 @@ import "swiper/css/effect-cards";
 import styles from "../styles/Slides.module.scss";
 
 // import required modules
-import { EffectCards } from "swiper";
-import SlideItem from "./SlideItem";
+import { EffectCards , Autoplay} from "swiper";
 
 export default function Slides() {
   return (
@@ -18,9 +17,13 @@ export default function Slides() {
     <Swiper
       effect={"cards"}
       grabCursor={true}
-      modules={[EffectCards]}
+      modules={[EffectCards, Autoplay]}
       className={styles.swiper}
-    >
+      loop={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}    >
       <SwiperSlide className={styles.swiper_slide}>
         "Add color to your world with our digital art!"
       </SwiperSlide>

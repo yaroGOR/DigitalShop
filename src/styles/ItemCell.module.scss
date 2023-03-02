@@ -16,7 +16,9 @@
 
     }
     .title{
-        z-index: 100;
+        z-index: 200;
+        position: relative;
+        color: darkslategray;
     }
     .price{
         position: absolute;
@@ -41,6 +43,8 @@
     
     .description{
         font-size: 1.2rem;
+        position: relative;
+        display: none;
     }
   
     img{
@@ -55,13 +59,15 @@
         color: white;
 
         .description{
+            z-index: 500;
+            display: block;
             transition: ease-in-out 0.8s;
-            z-index: 200;
+
 
         }
         img{
             transition: 0.5s ease;
-            filter:blur(24px ) grayscale(1);
+            filter:blur(24px) grayscale(1);
           
         }
     }

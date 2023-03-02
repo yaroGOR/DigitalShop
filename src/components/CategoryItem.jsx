@@ -7,8 +7,6 @@ const CategoryItem = (props) => {
     const img = props.category?.img
     const alt = props.category?.alt
     const category = props.category?.category
-    console.log('props', props)
-    console.log('category', category)
     
 
   return (

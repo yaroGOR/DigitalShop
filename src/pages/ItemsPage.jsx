@@ -4,6 +4,7 @@ import ItemCell from "../components/ItemCell";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { useGetData } from "../firebase/getData";
 import Modal from "../components/Modal";
+import { useMedia } from "../hooks/useMedia";
 
 function sortItemsByPrice(items, isAscending) {
   return items.sort((a, b) => {
@@ -83,6 +84,20 @@ const ItemsPage = () => {
   //     format:'png'
   // }
   // ]
+
+  let width = useMedia();
+
+  const [showSide, setShowSide] = useState(true);
+
+  let isMobile = width < 900 ? true : false;
+  useEffect(() => {
+    if (isMobile) {
+      setShowSide(false);
+    } else {
+      setShowSide(true);
+    }
+  }, [isMobile]);
+
   const [searchParams] = useSearchParams()
   const query = searchParams.get('category')?.substring(1)
   const [category, setCategory] = useState(query||'All');
@@ -111,7 +126,7 @@ const ItemsPage = () => {
     <>
 
     <div className={styles.container}>
-      <div className={styles.left}>
+      {showSide && <div className={styles.left}>
         <div className={styles.filter}>
           <label>Select category:</label>
           <select className={styles.select }value={category} onChange={e=>{setCategory(e.target.value)}}>
@@ -133,6 +148,7 @@ const ItemsPage = () => {
         </div>
         </div>
       </div>
+}
       <div className={styles.right}>
         <h3>{category}</h3>
         <div className={styles.itemsList}>

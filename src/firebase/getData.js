@@ -13,17 +13,14 @@ const [items, setItems] = useState([]);
         id: doc.id,
       }));
       setItems(newData);
-      console.log(newData)
-      console.log("items ", items, newData);
     }).catch((err) => {console.log('error while fetching from firebase', err)});
   };
-  console.log(items)
 
   useEffect(() => {
     
     getItems();
   }, []);
-  console.log(items)
+  console.log('GetData',items)
   return items
 
 }

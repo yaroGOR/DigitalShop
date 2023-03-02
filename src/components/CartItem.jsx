@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../styles/CartItem.module.scss";
 const CartItem = (props) => {
-  console.log(props);
   const { image, title, price } = props.item;
   return (
     <div className={styles.container}>
