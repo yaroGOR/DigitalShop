@@ -1,0 +1,30 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    padding: 5rem;    
+    
+    input{
+        height: 3rem;
+        font-size: 1.3rem;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 5px;
+
+
+    }
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        border: 2px solid black;
+        width: 10rem;
+        height: 3rem;
+    }
+    input{
+        height: 2rem;
+    }
+}

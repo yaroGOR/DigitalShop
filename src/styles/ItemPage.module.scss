@@ -1,0 +1,62 @@
+@use './button.module.scss';
+
+.container{
+    margin-top: 5rem;
+    align-self: center;
+    height: 95vh;
+    max-width: 95vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+   
+    .left{
+        flex: 1;
+        img{
+            margin-top: 5rem;
+            width: 100%;
+            aspect-ratio: 1/1;
+
+        }
+
+    }
+    .right{
+        flex: 2;
+        gap:2rem;
+        
+        .title{
+            font-size: 5rem;
+            margin-bottom: 5rem;
+            background: #74ebd5;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;  
+        }
+        p{
+            padding-top: 4rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .buttonContainer{
+            padding: 3rem;
+            display: flex;
+            gap:2rem;
+            align-items: center;
+            justify-content: center;
+        button{
+            color: black;
+            width: 10rem;
+            border: 1px solid black;
+        }
+    }
+
+
+    }
+
+}
+.modal{
+    z-index: 500;
+    color: black;
+}

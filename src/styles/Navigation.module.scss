@@ -1,0 +1,21 @@
+.navigation{
+    ul{
+        display: flex;
+        gap:1rem;
+        list-style: none;
+        font-size: 1.2rem;
+        li {
+           
+            
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            &:hover{
+                color:lightblue;
+            }
+            
+        }
+    }
+   
+}
