@@ -8,45 +8,15 @@ import ItemsPage from "./pages/ItemsPage";
 import ItemPage from "./pages/ItemPage";
 import { AuthContextProvider } from "./context/AuthContext";
 import Protected from "./components/Protected";
-import React, { useEffect, useState, useRef } from "react";
-import { db } from "./firebase/firebase";
-import { collection, getDocs } from "firebase/firestore";
+import React from "react";
 import CartPage from "./pages/CartPage";
-import FOG from "vanta/dist/vanta.fog.min";
-import * as THREE from "three";
+
 
 function App() {
-  const [vantaEffect, setVantaEffect] = useState(0);
-  const vantaRef = useRef(null);
-
-  // useEffect(() => {
-  //   if (!vantaEffect) {
-  //     setVantaEffect(
-  //       FOG({
-  //         el: vantaRef.current,
-  //         THREE: THREE,
-  //         mouseControls: true,
-  //         touchControls: true,
-  //         gyroControls: false,
-  //         minHeight: 200.0,
-  //         minWidth: 200.0,
-  //         highlightColor: 0x4fbcde,
-  //         midtoneColor: 0xa4a4a4,
-  //         lowlightColor: 0xf7f7f7,
-  //         baseColor: 0xfafafa,
-  //         blurFactor: 0.43,
-  //         speed: 0.8,
-  //         zoom: 0.5,
-  //       })
-  //     );
-  //   }
-  //   return () => {
-  //     if (vantaEffect) vantaEffect.destroy();
-  //   };
-  // }, [vantaEffect]);
+  
 
   return (
-    <div className="App" ref={vantaRef}>
+    <div className="App" >
       
       <AuthContextProvider>
         <div className="container">
